@@ -1,16 +1,19 @@
 import React, { useState } from "react";
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+import { useAuth } from "../context/useAuth";
 const Register = () => {
+  const { signup } = useAuth();
+
   const [user, setUser] = useState({});
   const handleChange = (e) => {
     const name = e.target.name,
       value = e.target.value;
     setUser({ ...user, [name]: value });
-  };
+}
   const handleSubmit = (e) => {
-    
+    signup(user.email, user.password, user.username);
     e.preventDefault();
   };
+  // console.log({ currentUser });
   return (
     <div>
       <h1>Register you info</h1>
@@ -19,7 +22,7 @@ const Register = () => {
           onChange={handleChange}
           type="text"
           placeholder="Name"
-          name="name"
+          name="username"
           required
         />
         <br />
