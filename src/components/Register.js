@@ -8,12 +8,11 @@ const Register = () => {
     const name = e.target.name,
       value = e.target.value;
     setUser({ ...user, [name]: value });
-}
+  };
   const handleSubmit = (e) => {
     signup(user.email, user.password, user.username);
     e.preventDefault();
   };
-  // console.log({ currentUser });
   return (
     <div>
       <h1>Register you info</h1>
