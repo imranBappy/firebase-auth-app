@@ -6,7 +6,7 @@ import Layout from "./components/Layout";
 import Login from "./components/Login";
 import PrivateRoute from "./components/PrivateRoute";
 import Register from "./components/Register";
-
+import React from "react";
 function App() {
   return (
     <div className="App">
