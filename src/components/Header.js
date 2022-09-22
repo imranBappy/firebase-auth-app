@@ -18,6 +18,7 @@ const Header = () => {
           <Link to="/dashboard">Dashboard</Link>
         </li>
       </ul>
+      <br />
     </div>
   );
 };
