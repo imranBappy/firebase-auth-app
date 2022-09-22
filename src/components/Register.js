@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 const Register = () => {
   const [user, setUser] = useState({});
   const handleChange = (e) => {
